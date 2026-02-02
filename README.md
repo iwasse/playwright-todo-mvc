@@ -41,4 +41,4 @@ This repository contains automated end-to-end tests for the TodoMVC application 
 - `tests/`: Contains the test files.
 - `playwright.config.ts`: Playwright configuration file.
 - `package.json`: Project dependencies and scripts.
-- `app-actions/`: app actions files representing user actions
+- `app-actions/`: Contains reusable functions that represent high-level user actions.
