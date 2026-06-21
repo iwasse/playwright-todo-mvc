@@ -5,6 +5,9 @@ on:
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+  schedule:
+    # Executa de segunda à sexta às 00:00 UTC (21:00 no horário de Brasília BRT)
+    - cron: '0 0 * * 1-5' 
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
