@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import * as todoActions from '../app-actions/todo-actions'
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://todomvc.com/examples/react/dist/')
+  await page.goto('https://todomvc.com2/examples/react/dist/')
 })
 
 test('Validate adding TODOs', async ({ page }) => {

@@ -25,8 +25,9 @@ async function addToDo(page: Page, ...todos: string[]) {
  */
 async function removeToDo(page: Page, ...todos: string[]) {
   for (const todo of todos) {
-    await page.getByTestId('todo-item-label').filter({ hasText: todo }).hover()
-    await page.getByRole('button', { name: '×' }).click()
+    const todoItem = page.getByTestId('todo-item').filter({ hasText: todo })
+    await todoItem.hover()
+    await todoItem.getByTestId('todo-item-button').click()
   }
 }
 
